@@ -20,7 +20,7 @@ if place:
             st.plotly_chart(figure)
         if option =="sky":
             sky_condition = [dict["weather"][0]["main"] for dict in filtered_data]
-            image_paths = ["images/"+sky.lower()+".png" for sky in sky_condition]
+            image_paths = [sky.lower()+".png" for sky in sky_condition]
             st.image(image_paths,width=115 )
     except KeyError:
         st.write("The city is not found")
